@@ -1,0 +1,95 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "demoName": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "variables": {
+
+
+  },
+  "resources": [
+    {
+      "name": "[concat(parameters('demoName'), 'plan')]",
+      "type": "Microsoft.Web/serverfarms",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-04-01",
+      "dependsOn": [ ],
+      "tags": {
+        "displayName": "appServicePlan"
+      },
+      "properties": {
+        "name": "[concat(parameters('demoName'), 'plan')]",
+        "sku": "Standard",
+        "workerSize": "1",
+        "numberOfWorkers": 1
+      }
+    },
+    {
+      "apiVersion": "2015-08-01",
+      "name": "[parameters('demoName')]",
+      "type": "Microsoft.Web/sites",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', concat(parameters('demoName'), 'plan'))]"
+      ],
+      "tags": {
+        "displayName": "webApp"
+      },
+      "properties": {
+        "serverFarmId": "[concat(parameters('demoName'), 'plan')]"
+      },
+      "resources": [
+        {
+          "apiVersion": "2015-08-01",
+          "name": "Staging",
+          "type": "slots",
+          "location": "[resourceGroup().location]",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/Sites', parameters('demoName'))]"
+          ],
+          "properties": {
+          }
+        }
+      ]
+    },
+    {
+      "name": "[concat(parameters('demoName'), 'plan-test')]",
+      "type": "Microsoft.Web/serverfarms",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-04-01",
+      "dependsOn": [ ],
+      "tags": {
+        "displayName": "appServicePlanTest"
+      },
+      "properties": {
+        "name": "[concat(parameters('demoName'), 'plan-test')]",
+        "sku": "Standard",
+        "workerSize": "1",
+        "numberOfWorkers": 1
+      }
+    },
+    {
+      "name": "[concat(parameters('demoName'), '-test')]",
+      "type": "Microsoft.Web/sites",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-08-01",
+      "dependsOn": [
+        "[concat('Microsoft.Web/serverfarms/', concat(parameters('demoName'), 'plan-test'))]"
+      ],
+      "tags": {
+        "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', concat(parameters('demoName'), 'plan-test'))]": "Resource",
+        "displayName": "webAppTest"
+      },
+      "properties": {
+        "name": "[concat(parameters('demoName'), '-test')]",
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms/', concat(parameters('demoName'), 'plan-test'))]"
+      }
+    }
+  ],
+  "outputs": {
+  }
+}
