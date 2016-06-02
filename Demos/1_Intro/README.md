@@ -9,7 +9,7 @@ This guide provides an introduction to some Visual Studio and Azure integration 
 * [Demo Steps](#demo)
 * [Clean Up](#clean)
 
-## <a name="#pre"></a> Pre-Requisites
+## <a name="pre"></a> Pre-Requisites
 *Estimated Setup Time: 45 minutes*
 
 1.	Navigate to the VSTS online portal (PORTALNAME.visualstudio.com)	
@@ -204,7 +204,7 @@ Finally, load into browser tabs the "Home" page of your VSTS project, and all 3 
 
 Setup Completed.
 
-## <a name="#demo"></a> Demo Steps
+## <a name="demo"></a> Demo Steps
 *Estimated Time: 8 minutes*
 
 1.	Starting from the "Home" tab of the VSTS portal, describe the concept of the dashboard and how it can be customized for your development team in a variety of ways
@@ -284,5 +284,5 @@ Setup Completed.
 
 Demo completed.
 
-## <a name="#clean"></a> Clean Up
+## <a name="clean"></a> Clean Up
 To clean up this environment delete the Azure resource group and VSTS project you created in the Setup section.

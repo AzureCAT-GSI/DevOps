@@ -15,13 +15,13 @@ This section lists the pre-requisites required for this demonstration.
 * Azure subscription
 * Visual Studio Team Services (VSTS) project
 
-## <a name="#setup"></a> Setup
+## <a name="setup"></a> Setup
 
 1.	Ensure you have completed the intro demo as this demo is a continuation.
 
 Setup Completed.
 
-## <a name="#demo"></a> Demo Steps
+## <a name="demo"></a> Demo Steps
 *Estimated Time: 8 minutes*
 
 1.	At the end of the intro video we had successfully build code in VSTS. Start by showing this completed build as a reminder
@@ -80,5 +80,5 @@ Setup Completed.
 
 Demo completed.
 
-## <a name="#clean"></a> Clean Up
+## <a name="clean"></a> Clean Up
 To clean up this environment delete the Azure resource group and VSTS project you created in the Setup section.
