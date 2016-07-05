@@ -20,3 +20,20 @@ The PowerPoint includes full speaker notes helping you understand the slides, an
 [[source code](https://github.com/GSIAzureCOE/DevOps/tree/master/Demos/2_ContinuousDeploy)]
 [[demo script](https://github.com/GSIAzureCOE/DevOps/tree/master/Demos/2_ContinuousDeploy)]
 [[video](https://gsiazurecoecontent.blob.core.windows.net/devops-in-azure/2_Demo_DevOps_ContinuousDeploySlots.mp4)]
+
+## Session Objectives
+* Give a definition of DevOps and review high-level DevOps processes (Code, Build, Test, Deploy, Monitor, CI/CD)
+* Show how to use VSTS and how to architect solutions for CI/CD/Release
+* Discuss new Dev/QA/Prod environments with the new Release Management)
+* Review ARM integration with VSTS
+
+## Session Prerequisites
+* None
+
+## Azure Services Covered
+* [Visual Studio Team Services](https://www.visualstudio.com/products/visual-studio-team-services-vs)
+* [Web Apps](https://azure.microsoft.com/en-us/documentation/services/app-service/web/)
+
+## Code of Conduct
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
