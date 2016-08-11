@@ -35,17 +35,17 @@ In this section, you will use a pre-configured ARM template to populate the App 
 | 1. Open the DevOps Visual Studio Project in Visual Studio                                       |     |
 | 1. RightClick the **ARMTemplate,** select Deployment / New Deployment                           |     |
 
-| 1. Complete the deployment parameters as per the screenshot example:
+1. Complete the deployment parameters as per the screenshot example:
 
 -   New Resource Group (eg. DevOpsDemo)
 
 -   Resource Group Location (closest to where you are based to avoid latency)
 
--                                                                                              | <img src="./Media/image4.png" width="478" height="293" /> |
+-                                                                                           <img src="./Media/image4.png" width="478" height="293" /> 
 
 <!-- -->
 
--   |--------------------------------------------------------------------------------------------------|-----------------------------------------------------------| | 1. Edit de **parameters** for the Template Parameters File as per the screenshot example | | | 1. Deploy this template. You can verify the deployment task in the Visual Studio Output window. | |
+-   ------------------------------------------------------------------------------------------------------------------------------------------------------------- 1. Edit de **parameters** for the Template Parameters File as per the screenshot example 1. Deploy this template. You can verify the deployment task in the Visual Studio Output window.
 
 | 1. Verify the Resource Group and resources have been created successfully from the Azure Portal |     |
 |-------------------------------------------------------------------------------------------------|-----|
@@ -70,7 +70,7 @@ In this section, you will create a new Visual Studio Team Services project onlin
 
 | 1. Navigate to the VSTS online portal (PORTALNAME.visualstudio.com)                   |     |
 |---------------------------------------------------------------------------------------|-----|
-| 1. Create a new project by clicking the “New” button under “Recent Projects & Teams”. |
+| 1. Create a new project by clicking the “New” button under “Recent Projects & Teams”. |     |
 
 -   Give the project a name, set its version control to Git, set the Shared with to ‘team members’
 
@@ -78,31 +78,33 @@ In this section, you will create a new Visual Studio Team Services project onlin
 
 <!-- -->
 
--   When finished, navigate to the newly created project landing page. |
+-   When finished, navigate to the newly created project landing page.
 
-                                                                                                      <img src="./Media/image9.png" width="463" height="388" />   |
+<!-- -->
 
-    1. From the project landing page click “Open in Visual Studio” | |
+-                                                                                                 <img src="./Media/image9.png" width="463" height="388" />   
 
-| 1. Clone the repository from VSTS to your local machine by selecting a folder on your local hard drive |
+    1.  From the project landing page click “Open in Visual Studio”
 
-                                                                                                                                                                  <img src="./Media/image12.png" width="279" height="226" />  |
+1. Clone the repository from VSTS to your local machine by selecting a folder on your local hard drive
 
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------| | 1. Now that we have our repository cloned locally we need code.
+                                                                                                                                                                  <img src="./Media/image12.png" width="279" height="226" />  
 
-     On the Home tab of the Team Explorer, add a new solution                                                                                                    | <img src="./Media/image13.png" width="279" height="307" /> |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 1. Now that we have our repository cloned locally we need code.
 
-1. From the “Installed” section, select Templates – Visual C\# - Web and then click on “ASP.NET Web Application” Give the solution a name, and deselect the box for Application Insights | |
-1. Use the MVC template (1) while adding unit tests (2), setting authentication to “No Authentication” (3), and deselecting the box to Host in the Cloud (4). Then select OK to provision the solution. | |
+     On the Home tab of the Team Explorer, add a new solution                                                                                                     <img src="./Media/image13.png" width="279" height="307" /> 
 
-| 1. Open Index.cshtml from the WebApplication project and adjust the title
-&lt;h1&gt;ASP.NET&lt;/h1&gt; to “&lt;h1&gt;Azure GSI DevOps Demo&lt;/h1&gt;”
+1.  From the “Installed” section, select Templates – Visual C\# - Web and then click on “ASP.NET Web Application” Give the solution a name, and deselect the box for Application Insights
 
-| -   Save the changes                                                                                                                                                         | -    |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
-| -   1. Check in our new solution to the local repository by right clicking the solution and selecting “Commit”                                                               | -    |
-| 1. Give a comment and click the small arrow on the right side of the “Commit” button to drop down additional options. Then click “Commit & Push” to push the changes to VSTS |      |
-| 1. Verify that the solution is visible in the Code tab of VSTS                                                                                                               |      |
+2.  Use the MVC template (1) while adding unit tests (2), setting authentication to “No Authentication” (3), and deselecting the box to Host in the Cloud (4). Then select OK to provision the solution.
+
+1. Open Index.cshtml from the WebApplication project and adjust the title &lt;h1&gt;ASP.NET&lt;/h1&gt; to “&lt;h1&gt;Azure GSI DevOps Demo&lt;/h1&gt;”
+
+| - Save the changes                                                                                                                                                           | -   |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----|
+| - 1. Check in our new solution to the local repository by right clicking the solution and selecting “Commit”                                                                 | -   |
+| 1. Give a comment and click the small arrow on the right side of the “Commit” button to drop down additional options. Then click “Commit & Push” to push the changes to VSTS |     |
+| 1. Verify that the solution is visible in the Code tab of VSTS                                                                                                               |     |
 
 This completes the configuration of a new VSTS Project, syncing it offline to your development station, creating a new ASP.NET Web Application and upload the changes to VSTS.
 
@@ -119,17 +121,17 @@ In this section, you will create an Azure Service Endpoint for the VSTS project 
 |--------------------------------------------------------------------------------------|-----|
 | 1. Select **Services**                                                               |     |
 | 1. Select **New Service Endpoint / Azure Resource Manager**                          |     |
-| 1. Complete the fields with the data resulting from the following PowerSHell script: |
+| 1. Complete the fields with the data resulting from the following PowerSHell script: |     |
 
-     **Create\_Service\_Principal\_ID.ps1** in the DevOps content folder                | (Another source for this script is GitHub:                                                            
+     **Create\_Service\_Principal\_ID.ps1** in the DevOps content folder                 (Another source for this script is GitHub:                                                            
                                                                                                                                                                                                 
                                                                                          <https://github.com/Microsoft/vsts-tasks/blob/master/Tasks/DeployAzureResourceGroup/SPNCreation.ps1>)  
                                                                                                                                                                                                 
                                                                                          <img src="./Media/image23.png" width="458" height="204" />                                             
                                                                                                                                                                                                 
-                                                                                         <img src="./Media/image24.png" width="636" height="304" />                                             |
+                                                                                         <img src="./Media/image24.png" width="636" height="304" />                                             
 
-                                                                                      | |
+                                                                                      
 
 This completes the creation of the Azure Service Endpoint for Visual Studio Team Services.
 
@@ -146,7 +148,7 @@ In this section, you will create a “Build” to demo the Continuous Integratio
 |------------------------------------------------------------------------------------------------------------------------------|-----|
 | 1. Since we’ve been working with Visual Studio, go ahead and select the Visual Studio Template.                              |     |
 | 1. On the Settings dialog leave everything as is, **make sure you activate the “Continuous integration”** and click “Create” |     |
-| 1. This template pre-bakes the steps that we need for a build.                                                               |
+| 1. This template pre-bakes the steps that we need for a build.                                                               |     |
 
      However, since we will be deploying to a web app, we’ll need a web deployment package. To generate this .zip file, we need to **adjust the MSBuild Arguments** from the first step to include:  
                                                                                                                                                                                                      
@@ -156,11 +158,11 @@ In this section, you will create a “Build” to demo the Continuous Integratio
                                                                                                                                                                                                      
      **\*\*\\bin\\\*\***                                                                                                                                                                             
                                                                                                                                                                                                      
-     Click Save and give your Build definition a title, ex. “DevOpsDemoBuild”                                                                                                                        | <img src="./Media/image28.png" width="456" height="196" /> 
+     Click Save and give your Build definition a title, ex. “DevOpsDemoBuild”                                                                                                                         <img src="./Media/image28.png" width="456" height="196" /> 
                                                                                                                                                                                                                                                                   
-                                                                                                                                                                                                      <img src="./Media/image29.png" width="451" height="212" />  |
+                                                                                                                                                                                                      <img src="./Media/image29.png" width="451" height="212" />  
 
-1. Queue a new build and verify that the build completes successfully. (This could take up to 3 min in total) Clicking the “Artifacts” tab will give you the option to Explore files generated during the build, including our deployment package located at | |
+1.  Queue a new build and verify that the build completes successfully. (This could take up to 3 min in total) Clicking the “Artifacts” tab will give you the option to Explore files generated during the build, including our deployment package located at
 
 Use Visual Studio Team Services to create a new Release (Continuous Deployment demo)
 ------------------------------------------------------------------------------------
@@ -171,7 +173,7 @@ Use Visual Studio Team Services to create a new Release (Continuous Deployment d
 
 In this section, you will create a “Release” to demo the Continuous Deployment (CD) functionality out of the DevOps workshop
 
-| 1. From your VSTS project, select **Release**, and create a new Release definition by selecting the “+” sign
+1. From your VSTS project, select **Release**, and create a new Release definition by selecting the “+” sign
 
 Select the **Empty** definition
 
@@ -179,18 +181,18 @@ Select the **Empty** definition
 |-------------------------------------------------------------------------------------------------------------|-----|
 | 1. In the New Release Definition, make sure to select the **Continuous Deployment** option and press Create |     |
 | 1. This creates a New Release Definition Environment                                                        |     |
-| 1. Add a release task to this environment,                                                                  |
+| 1. Add a release task to this environment,                                                                  |     |
 
      - by clicking the **+ Add Tasks** button.                                                                  
      - From the Add Tasks list, select **AzureRM Web App Deployment (Preview)                                   
      **- Press the **Add** button                                                                               
-     - Press Close                                                                                              | <img src="./Media/image37.png" width="446" height="456" /> |
+     - Press Close                                                                                               <img src="./Media/image37.png" width="446" height="456" /> 
 
 | 1. This adds the **Deploy AzureRM Web App Deployment** to the tasks list |     |
 |--------------------------------------------------------------------------|-----|
-| 1. Complete the fields as follows:                                       |
+| 1. Complete the fields as follows:                                       |     |
 
-**Note: if the data in the fields does not get populated automatically, there is something wrong with the Azure ServicePoint creation (see previous steps)** |
+**Note: if the data in the fields does not get populated automatically, there is something wrong with the Azure ServicePoint creation (see previous steps)**
 
                                                                                                                                                                 -   AzureRM Subscription = your Azure subscription                                                                                          
                                                                                                                                                                                                                                                                                                             
@@ -200,28 +202,27 @@ Select the **Empty** definition
                                                                                                                                                                                                                                                                                                             
                                                                                                                                                                 -   Enter **Staging** as slot name (is defined like that during the ARM Template deployment)                                                
                                                                                                                                                                                                                                                                                                             
-                                                                                                                                                                -   Package = browse to the **&lt;package&gt;.zip** file, which has been created in the Build step before                                   |
+                                                                                                                                                                -   Package = browse to the **&lt;package&gt;.zip** file, which has been created in the Build step before                                   
 
-1. Rename the Environment to “Staging” (Select Environment 1, which turns this field white… start typing) | |
+1.  Rename the Environment to “Staging” (Select Environment 1, which turns this field white… start typing)
 
-| 1. With our test environment configured, we now need to setup a second environment for production Click the …” and select the “**Clone environment**”.
-This shows the Add new environment popup window. Accept the default values and press the **Create** button |
+1. With our test environment configured, we now need to setup a second environment for production Click the …” and select the “**Clone environment**”. This shows the Add new environment popup window. Accept the default values and press the **Create** button
 
-                                                                                                                                                                    <img src="./Media/image42.png" width="395" height="267" />  |
+                                                                                                                                                                    <img src="./Media/image42.png" width="395" height="267" />  
 
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------| | 1. Another way to create a second environment, is again selecting **Add Environment**, **Create New Environment**, and selecting **AzureRM Web App Deployment** Populate the fields as shown in the screenshot | |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 1. Another way to create a second environment, is again selecting **Add Environment**, **Create New Environment**, and selecting **AzureRM Web App Deployment** Populate the fields as shown in the screenshot
 
 | 1. **Save** the release definition, by pressing the **Save** button. This shows the Definition in the left hand column |     |
 |------------------------------------------------------------------------------------------------------------------------|-----|
-| 1. In this next step, we are to create a new **Release**, based on the previously created Release Defintion            |
+| 1. In this next step, we are to create a new **Release**, based on the previously created Release Defintion            |     |
 
      - select the Release Definition in the left column; Press the **+ Release** / **Create Release** option in the menu                                         
                                                                                                                                                                  
-     Select the (Build) version as created in the previous build lab, accept the other default values for staging and production releases, and press **Create**  | <img src="./Media/image45.png" width="460" height="212" /> 
+     Select the (Build) version as created in the previous build lab, accept the other default values for staging and production releases, and press **Create**   <img src="./Media/image45.png" width="460" height="212" /> 
                                                                                                                                                                                                                               
-                                                                                                                                                                  <img src="./Media/image46.png" width="486" height="360" />  |
+                                                                                                                                                                  <img src="./Media/image46.png" width="486" height="360" />  
 
-1. The **Release** has been created. Select the **&lt;release&gt;** from the menu | |
+1.  The **Release** has been created. Select the **&lt;release&gt;** from the menu
 
 | 1. This shows the details and progress of the release |     |
 |-------------------------------------------------------|-----|
