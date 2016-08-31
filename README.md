@@ -9,17 +9,17 @@ The PowerPoint includes full speaker notes helping you understand the slides, an
 * Demo Setup
 [[source code](https://github.com/GSIAzureCOE/DevOps/tree/master/Demos/Code)]
 [[demo script](https://github.com/GSIAzureCOE/DevOps/tree/master/Demos/Code)]
-[[video](https://gsiazuregsicontent.blob.core.windows.net/devops-in-azure/0_Demo_DevOps_Setup.mp4)]
+[[video](https://azurecatgsicontent.blob.core.windows.net/devops-in-azure/0_Demo_DevOps_Setup.mp4)]
 
 * Demo 1 - Introduction
 [[source code](https://github.com/GSIAzureCOE/DevOps/tree/master/Demos/1_Intro)]
 [[demo script](https://github.com/GSIAzureCOE/DevOps/tree/master/Demos/1_Intro)]
-[[video](https://gsiazuregsicontent.blob.core.windows.net/devops-in-azure/1_Demo_DevOps_Intro.mp4)]
+[[video](https://azurecatgsicontent.blob.core.windows.net/devops-in-azure/1_Demo_DevOps_Intro.mp4)]
 
 * Demo 2 - Continuous Deployment
 [[source code](https://github.com/GSIAzureCOE/DevOps/tree/master/Demos/2_ContinuousDeploy)]
 [[demo script](https://github.com/GSIAzureCOE/DevOps/tree/master/Demos/2_ContinuousDeploy)]
-[[video](https://gsiazuregsicontent.blob.core.windows.net/devops-in-azure/2_Demo_DevOps_ContinuousDeploySlots.mp4)]
+[[video](https://azurecatgsicontent.blob.core.windows.net/devops-in-azure/2_Demo_DevOps_ContinuousDeploySlots.mp4)]
 
 ## Session Objectives
 * Give a definition of DevOps and review high-level DevOps processes (Code, Build, Test, Deploy, Monitor, CI/CD)
